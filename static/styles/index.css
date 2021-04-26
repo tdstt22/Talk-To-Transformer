@@ -1,0 +1,38 @@
+  
+h1, p, input {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+#speechContainer {
+    margin: 20px;
+}
+
+#submitButton {
+    background-color: #07e45c;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+}
+
+#SpeechRecContainer {
+    margin-top: 20px;
+}
+
+#speechText {
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+}
+
+#speechText2 {
+    font-size: 18px;
+    width: 500px;
+    text-align: center;
+}
