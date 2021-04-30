@@ -1,7 +1,6 @@
   
 h1, p, input {
     font-family: 'Oswald', sans-serif;
-    text-align: center;
 }
 
 #speechContainer {
@@ -28,11 +27,9 @@ h1, p, input {
 #speechText {
     font-size: 18px;
     width: 300px;
-    text-align: center;
 }
 
 #speechText2 {
     font-size: 18px;
     width: 500px;
-    text-align: center;
 }
