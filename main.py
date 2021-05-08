@@ -12,30 +12,25 @@ def index():
     model_output = ""
     if request.method == "POST":
         print("FORM DATA RECEIVED")
-
         if "file" not in request.files:
+            # Check if file exist
             return redirect(request.url)
         file = request.files["file"]
-
+        response_length = int(request.form["length"])
         if file.filename == "":
+            # Check if nothing in file
             return redirect(request.url)
-
         if file:
-            """
-            recognizer = sr.Recognizer()
-            audioFile = sr.AudioFile(file)
-            with audioFile as source:
-                data = recognizer.record(source)
-            text = recognizer.recognize_google(data, key=None)
-            transcript = text
-            #print(text)
-            """
+            
+            # Transcribe the audio file into text
             stt = STT()
             transcript = stt.run(file)
 
+            # Run the transformer model to get output
             model = Transformer()
-            model_output = model.run(transcript)
+            model_output = model.run(transcript, response_length)
 
+            # Convert transformer text output to audio file
             tts = TTS(model_output[len(transcript):])
             tts.save("static/test.mp3")
 

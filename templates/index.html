@@ -13,6 +13,8 @@
     <p> Explore how a deep learning model will complete your sentence. Simply upload a WAV file and listen to what a Transformer has to say</p>
     <form method="post" enctype="multipart/form-data">
         <input type="file" name="file"/>
+        <label for="length">Length of Response (Between 1 and 300)</label>
+        <input type="number" id="length" name="length" min="1" max="300">
         <br>
         <input type="submit" id="submitButton" value="Lets Talk"/>
     </form>
@@ -20,7 +22,7 @@
     <div id="SpeechRecContainer">
         <h1>Transcribed Audio</h1>
         <p id="speechText">{{transcript}}</p>
-        <h1>Transformer Output</h1>
+        <h1>Transformer Response</h1>
         <p id="speechText2">{{model_output}}</p>
         <audio controls autoplay>
             <source src="/static/test.mp3" type="audio/mpeg">   
