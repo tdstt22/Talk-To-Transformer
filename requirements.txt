@@ -11,3 +11,4 @@ google-auth-oauthlib==0.4.4
 googleapis-common-protos==1.53.0
 Flask
 gunicorn
+logging==0.4.9.6
